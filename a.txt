@@ -1,0 +1,83 @@
+
+extern "C" {
+    fn printf(format i8*, ...) i32;
+
+}
+
+fn testArray(a1 i32, a2 bool, a3 i8*) bool {
+    let v22 i8* = a3;
+    let v21 bool = a2;
+    let v20 i32 = a1;
+    let v22  = a3;
+    let v21  = a2;
+    let v20  = a1;
+    let v19 bool = [false, true];
+    let v18  = [true, false];
+    let v17 u32 = [1, 2];
+    let v15  = [1.0, 2.0, 3.0];
+    let v16  = [1.0, 2.0, 3.0];
+    let v13 f64 = [1.0, 2.0, 3.0];
+    let v14 f32 = [1.0, 2.0, 3.0];
+    let v11 f64;
+    let v12 f32;
+    let v9 i64 = [111, 8589934592];
+    let v8 i64 = [[111, 8589934592], [111, 8589934592]];
+    let v7 i64 = [[10, 20], [30, 40], [50, 60]];
+    let v5  = [[1, 2], [3, 4]];
+    let v4  = [1, 2, 3];
+    let v1 i32;
+    let v2  = a1;
+    v2 = a1;
+    let v3  = testArray(a1, a2, a3);
+    let v10 i32 = [1, 2];
+    return [true, false];
+}
+
+fn testVoidPtr(i void*) void* {
+    return i;
+}
+
+fn main() i32 {
+    testWhile();
+    fizzbuzz(0, 100);
+    return 0;
+}
+
+fn testWhile() void {
+    let i  = 0;
+    while (i) < (10) {
+        let j  = 0;
+        while (j) < (10) {
+            printf("%d ", ((10) * (i)) + (j));
+            j = (j) + (1);
+        };
+        i = (i) + (1);
+    };
+    printf("\n\n");
+}
+
+fn fizzbuzz(min i32, max i32) void {
+    let i  = min;
+    while (i) < (max) {
+        let n  = (i) + (1);
+        if ((n) % (15)) == (0) {
+            printf("fizzbuzz ");
+        }
+        else {
+            if ((n) % (5)) == (0) {
+                printf("buzz ");
+            }
+            else {
+                if ((n) % (3)) == (0) {
+                    printf("fizz ");
+                }
+                else {
+                    printf("%d ", n);
+                };
+            };
+        };
+        i = (i) + (1);
+    };
+    printf("\n\n");
+}
+
